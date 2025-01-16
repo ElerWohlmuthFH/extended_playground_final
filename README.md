@@ -9,6 +9,8 @@ docker compose -f docker-compose.yml up --build
 Backend:
 http://localhost:5001
 
+http://localhost:5001/api/bears
+
 Frontend:
 http://localhost/
 
