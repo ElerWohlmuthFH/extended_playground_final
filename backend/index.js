@@ -19,6 +19,11 @@ app.get('/api/bears', async (req, res) => {
     }
 });
 
+app.get('/', (req, res) => {
+    res.send('Backend is running and ready to serve API requests.');
+});
+
+
 app.listen(PORT, () => {
-    console.log(`Backend is running on http://localhost:${PORT}`);
+    console.log(`Backend is running on http://localhost:5001`);
 });
