@@ -1,0 +1,15 @@
+
+version: '3.8'
+services:
+  frontend:
+    build: .
+    ports:
+      - "3000:3000"
+    command: npm run dev
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "5001:5000"
+    command: npm run dev
