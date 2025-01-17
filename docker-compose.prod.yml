@@ -1,13 +1,17 @@
-
 version: '3.8'
 services:
   frontend:
     build: .
     ports:
       - "80:80"
+    environment:
+      NODE_ENV: production
+    command: npm start  # Runs "vite preview --port 80 --host"
 
   backend:
     build:
       context: ./backend
     ports:
       - "5001:5000"
+    environment:
+      NODE_ENV: production
